@@ -22,11 +22,11 @@ init();
 
 //save button
 $(".saveBtn").click(function () {
-  savedText = $(this).siblings(".txt").val();
-  console.log(eventText);
-  savedTime = $(this).siblings(".hour").text();
-  console.log(savedTime);
-  localStorage.setItem(savedTime, JSON.stringify(savedText));
+  sveText = $(this).siblings(".txt").val();
+  console.log(sveText);
+  sveTime = $(this).siblings(".hour").text();
+  console.log(sveTime);
+  localStorage.setItem(sveTime, JSON.stringify(sveText));
 
   inputText();
   pastPresent();
@@ -34,65 +34,77 @@ $(".saveBtn").click(function () {
 
 //placing saved text
 function inputText() {
-  var saved1 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#1").val(saved1);
+  var savedSveText1 = JSON.parse(localStorage.getItem("10:00am"));
+  $("#1").val("");
+  $("#1").val(saveSveText1);
 
-  var saved2 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#2").val(saved2);
+  var savedSveText2 = JSON.parse(localStorage.getItem("11:00am"));
+  $("#2").val("");
+  $("#2").val(savedSveText2);
 
-  var saved3 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#3").val(saved3);
+  var savedSveText3 = JSON.parse(localStorage.getItem("12:00pm"));
+  $("#3").val("");
+  $("#3").val(savedSveText3);
 
-  var saved4 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#4").val(saved4);
+  var savedSveText4 = JSON.parse(localStorage.getItem("1:00pm"));
+  $("#4").val("");
+  $("#4").val(savedSveText4);
 
-  var saved5 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#5").val(saved5);
+  var savedSveText5 = JSON.parse(localStorage.getItem("2:00pm"));
+  $("#5").val("");
+  $("#5").val(savedSveText5);
 
-  var saved6 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#6").val(saved6);
+  var savedSveText6 = JSON.parse(localStorage.getItem("3:00pm"));
+  $("#6").val("");
+  $("#6").val(savedSveText6);
 
-  var saved7 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#7").val(saved7);
+  var savedSveText7 = JSON.parse(localStorage.getItem("4:00pm"));
+  $("#7").val("");
+  $("#7").val(savedSveText7);
 
-  var saved8 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#8").val(saved8);
+  var savedSveText8 = JSON.parse(localStorage.getItem("5:00pm"));
+  $("#8").val("");
+  $("#8").val(savedSveText8);
 
-  var saved9 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#9").val(saved9);
+  var savedSveText9 = JSON.parse(localStorage.getItem("6:00pm"));
+  $("#9").val("");
+  $("#9").val(savedSveText9);
 
-  var saved10 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#10").val(saved10);
+  var savedSveText10 = JSON.parse(localStorage.getItem("7:0pam"));
+  $("#10").val("");
+  $("#10").val(savedSveText10);
 
-  var saved11 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#11").val(saved11);
+  var savedSveText11 = JSON.parse(localStorage.getItem("8:00pm"));
+  $("#11").val("");
+  $("#11").val(savedSveText11);
 
-  var saved12 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#12").val(saved12);
+  var savedSveText12 = JSON.parse(localStorage.getItem("9:00pm"));
+  $("#12").val("");
+  $("#12").val(savedSveText12);
 
-  var saved13 = JSON.parse(localStorage.getItem("10:00 am"));
-  $("#13").val(saved13);
+  var savedSveText13 = JSON.parse(localStorage.getItem("10:00 pm"));
+  $("#13").val("");
+  $("#13").val(savedSveText13);
 }
 
 //display colour change
-function pastPresent() {
-  $(".txt").each(function () {
-    var scheduledTime = parseInt($(this).attr("id"));
-    console.log(scheduledTime);
+// function pastPresent() {
+//   $(".txt").each(function () {
+//     var scheduledTime = parseInt($(this).attr("id"));
+//     console.log(scheduledTime);
 
-    if (currentTime > scheduledTime) {
-      $(this).removeClass("future");
-      $(this).removeClass("present");
-      $(this).addClass("past");
-    } else if (currentTime < scheduledTime) {
-      $(this).removeClass("present");
-      $(this).removeClass("past");
-      $(this).addClass("future");
-    } else {
-      $(this).removeClass("future");
-      $(this).removeClass("past");
-      $(this).addClass("present");
-    }
-  });
-}
-//when refreshed info stay
+//     if (currentTime > scheduledTime) {
+//       $(this).removeClass("future");
+//       $(this).removeClass("present");
+//       $(this).addClass("past");
+//     } else if (currentTime < scheduledTime) {
+//       $(this).removeClass("present");
+//       $(this).removeClass("past");
+//       $(this).addClass("future");
+//     } else {
+//       $(this).removeClass("future");
+//       $(this).removeClass("past");
+//       $(this).addClass("present");
+//     }
+//   });
+// }
