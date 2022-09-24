@@ -13,16 +13,12 @@ https://hannahhue.github.io/workday-schedule/
 ## Usage
 
 open page
-![plain pg](assets/images/screenshot.png)
 
 click where you want to enter text
-![click txt box](assets/images/screenshot.png)
 
 save the input
-![click save](assets/images/screenshot.png)
 
 come back anytime your info will stay even refreshed!
-![refreshed](assets/images/screenshot.png)
 
 ## Credits
 

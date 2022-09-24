@@ -29,38 +29,27 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div id="formContainer" class="container">
       <!-- Timeblocks go here -->
-        <div class="rowTwo">
-            <p class=hour>11:00am</p>
-            <textarea id="txt2" class="txt"></textarea>
-            <button id="save-btn2" class="sbtn">Save</button>
-        </div>
-        <div class="rowThree">
-            <p class=hour>12:00pm</p>
-            <textarea id="txt3" class="txt"></textarea>
-            <button id="save-btn3" class="sbtn">Save</button>
-        </div>
-        <div class="rowFour">
-            <p class=hour>1:00pm</p>
-            <textarea id="txt4" class="txt"></textarea>
-            <button id="save-btn4" class="sbtn">Save</button>
-        </div>
-        <div class="rowFive">
-            <p class=hour>2:00pm</p>
-            <textarea id="txt5" class="txt"></textarea>
-            <button id="save-btn5" class="sbtn">Save</button>
-        </div>
-        <div class="rowSix">
-            <p class=hour>3:00pm</p>
-            <textarea id="txt6" class="txt"></textarea>
-            <button id="save-bt6n" class="sbtn">Save</button>
-        </div>
-        <div class="rowSeven">
-            <p class=hour>4:00pm</p>
-            <textarea id="txt7" class="txt"></textarea>
-            <button id="save-btn7" class="sbtn">Save</button>
-        </div>
+      <label for="9">09 AM:</label>
+      <input type="text" class="timeblock 9" id="block9"><button class="saveBtn 9">save</button><br>
+      <label for="10">10 AM:</label>
+      <input type="text" class="timeblock 10" id="block10"><button class="saveBtn 10">save</button><br>
+      <label for="11">11 AM:</label>
+      <input type="text" class="timeblock 11" id="block11"><button class="saveBtn 11">save</button><br>
+      <label for="12">12 PM:</label>
+      <input type="text" class="timeblock 12" id="block12"><button class="saveBtn 12">save</button><br>
+      <label for="1">01 PM:</label>
+      <input type="text" class="timeblock 1" id="block1"><button class="saveBtn 1">save</button><br>
+      <label for="2">02 PM:</label>
+      <input type="text" class="timeblock 2" id="block2"><button class="saveBtn 2">save</button><br>
+      <label for="3">03 PM:</label>
+      <input type="text" class="timeblock 3" id="block3"><button class="saveBtn 3">save</button><br>
+      <label for="4">04 PM:</label>
+      <input type="text" class="timeblock 4" id="block4"><button class="saveBtn 4">save</button><br>
+      <label for="5">05 PM:</label>
+      <input type="text" class="timeblock 5" id="block5"><button class="saveBtn 5">save</button>
+    </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

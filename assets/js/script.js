@@ -61,8 +61,8 @@ function recall() {
 
 //display colour change per time
 function pastPresent() {
-  $(".txt").each(function () {
-    var scheduledTime = parseInt($(this).attr("id"));
+  $(".timeBlock").each(function () {
+    var scheduledTime = this.val();
     console.log(scheduledTime);
 
     if (currentTime > scheduledTime) {
@@ -80,3 +80,5 @@ function pastPresent() {
     }
   });
 }
+
+formContainer.on("click", ".saveBtn", saveWork);
