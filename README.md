@@ -8,7 +8,7 @@ This schedule should allow you to easily keep track of any upcoming events and o
 
 no installation required just load up the link :
 
-link here
+https://hannahhue.github.io/workday-schedule/
 
 ## Usage
 
