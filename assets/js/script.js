@@ -1,9 +1,11 @@
 // assign vars
 var m = moment();
-var sveTime;
-var sveText;
+
 var currentTime = moment();
 var timeContainer = $("#currentDay");
+
+var formContainer = $("#formContainer");
+var button = $("button");
 
 //up to date time/day
 setInterval(function () {
@@ -14,13 +16,13 @@ function init() {
   setInterval(function () {
     timeContainer.text(currentTime.format("MMMM Do, dddd, hh:mm A"));
   }, 1000);
+  recall();
+  pastPresent();
 }
 
 init();
 
-//make time blocks here
-
-//save button
+//save function per row
 function saveWork(event) {
   event.preventDefault();
   if ($(this).attr("class") === "saveBtn 9") {
@@ -44,24 +46,37 @@ function saveWork(event) {
   }
 }
 
-//display colour change
-// function pastPresent() {
-//   $(".txt").each(function () {
-//     var scheduledTime = parseInt($(this).attr("id"));
-//     console.log(scheduledTime);
+//calling new inputs (saved)
+function recall() {
+  $("#block9").val(localStorage.getItem("block9"));
+  $("#block10").val(localStorage.getItem("block10"));
+  $("#block11").val(localStorage.getItem("block11"));
+  $("#block12").val(localStorage.getItem("block12"));
+  $("#block1").val(localStorage.getItem("block1"));
+  $("#block2").val(localStorage.getItem("block2"));
+  $("#block3").val(localStorage.getItem("block3"));
+  $("#block4").val(localStorage.getItem("block4"));
+  $("#block5").val(localStorage.getItem("block5"));
+}
 
-//     if (currentTime > scheduledTime) {
-//       $(this).removeClass("future");
-//       $(this).removeClass("present");
-//       $(this).addClass("past");
-//     } else if (currentTime < scheduledTime) {
-//       $(this).removeClass("present");
-//       $(this).removeClass("past");
-//       $(this).addClass("future");
-//     } else {
-//       $(this).removeClass("future");
-//       $(this).removeClass("past");
-//       $(this).addClass("present");
-//     }
-//   });
-// }
+//display colour change per time
+function pastPresent() {
+  $(".txt").each(function () {
+    var scheduledTime = parseInt($(this).attr("id"));
+    console.log(scheduledTime);
+
+    if (currentTime > scheduledTime) {
+      $(this).removeClass("future");
+      $(this).removeClass("present");
+      $(this).addClass("past");
+    } else if (currentTime < scheduledTime) {
+      $(this).removeClass("present");
+      $(this).removeClass("past");
+      $(this).addClass("future");
+    } else {
+      $(this).removeClass("future");
+      $(this).removeClass("past");
+      $(this).addClass("present");
+    }
+  });
+}
